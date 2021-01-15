@@ -1,0 +1,856 @@
+rm -f dwm drw.o dwm.o util.o dwm-6.2.tar.gz
+rm -f dwm-msg
+dwm build options:
+CFLAGS   = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/X11R6/include -I/usr/include/freetype2   -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION="6.2" -DXINERAMA
+LDFLAGS  = -L/usr/X11R6/lib -lX11 -lXinerama -lfontconfig -lXft        
+CC       = cc
+cc -c -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/X11R6/include -I/usr/include/freetype2   -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"6.2\" -DXINERAMA drw.c
+cc -c -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os -I/usr/X11R6/include -I/usr/include/freetype2   -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"6.2\" -DXINERAMA dwm.c
+In file included from config.h:239,
+                 from dwm.c:732:
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:9: warning: braces around scalar initializer
+   43 |         [SchemeNorm]         = {{ normfgcolor,      normbgcolor,      normbordercolor,      normfloatc
+      |         ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:9: note: (near initialization for ‘colors[0][0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:9: warning: braces around scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:9: note: (near initialization for ‘colors[0][0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:53: warning: excess elements in scalar initializer
+   43 |         [SchemeNorm]         = {{ normfgcolor,      normbgcolor,      normbordercolor,      normfloatc
+      |                                                     ^~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:53: note: (near initialization for ‘colors[0][0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:71: warning: excess elements in scalar initializer
+   43 |         [SchemeNorm]         = {{ normfgcolor,      normbgcolor,      normbordercolor,      normfloatc
+      |                                                                       ^~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:71: note: (near initialization for ‘colors[0][0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:93: error: ‘normfloatc’ undeclared here (not in a function); did you mean ‘normfloatcolor’?
+   43 |         [SchemeNorm]         = {{ normfgcolor,      normbgcolor,      normbordercolor,      normfloatc
+      |                                                                                             ^~~~~~~~~~
+      |                                                                                             normfloatcolor
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:93: warning: excess elements in scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:93: note: (near initialization for ‘colors[0][0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:44:1: error: expected ‘}’ before ‘olor’
+   44 | olor }},
+      | ^~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:43:33: note: to match this ‘{’
+   43 |         [SchemeNorm]         = {{ normfgcolor,      normbgcolor,      normbordercolor,      normfloatc
+      |                                 ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:9: warning: braces around scalar initializer
+   45 |         [SchemeSel]          = {{ selfgcolor,       selbgcolor,       selbordercolor,       selfloatco
+      |         ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:9: note: (near initialization for ‘colors[0][1]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:9: warning: braces around scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:9: note: (near initialization for ‘colors[0][1]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:53: warning: excess elements in scalar initializer
+   45 |         [SchemeSel]          = {{ selfgcolor,       selbgcolor,       selbordercolor,       selfloatco
+      |                                                     ^~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:53: note: (near initialization for ‘colors[0][1]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:71: warning: excess elements in scalar initializer
+   45 |         [SchemeSel]          = {{ selfgcolor,       selbgcolor,       selbordercolor,       selfloatco
+      |                                                                       ^~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:71: note: (near initialization for ‘colors[0][1]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:93: error: ‘selfloatco’ undeclared here (not in a function); did you mean ‘selfloatcolor’?
+   45 |         [SchemeSel]          = {{ selfgcolor,       selbgcolor,       selbordercolor,       selfloatco
+      |                                                                                             ^~~~~~~~~~
+      |                                                                                             selfloatcolor
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:93: warning: excess elements in scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:93: note: (near initialization for ‘colors[0][1]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:46:1: error: expected ‘}’ before ‘lor’
+   46 | lor }},
+      | ^~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:45:33: note: to match this ‘{’
+   45 |         [SchemeSel]          = {{ selfgcolor,       selbgcolor,       selbordercolor,       selfloatco
+      |                                 ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:9: warning: braces around scalar initializer
+   47 |         [SchemeTitleNorm]    = {{ titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormf
+      |         ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:9: note: (near initialization for ‘colors[0][2]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:9: warning: braces around scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:9: note: (near initialization for ‘colors[0][2]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:53: warning: excess elements in scalar initializer
+   47 |         [SchemeTitleNorm]    = {{ titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormf
+      |                                                     ^~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:53: note: (near initialization for ‘colors[0][2]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:71: warning: excess elements in scalar initializer
+   47 |         [SchemeTitleNorm]    = {{ titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormf
+      |                                                                       ^~~~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:71: note: (near initialization for ‘colors[0][2]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:93: error: ‘titlenormf’ undeclared here (not in a function)
+   47 |         [SchemeTitleNorm]    = {{ titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormf
+      |                                                                                             ^~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:93: warning: excess elements in scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:93: note: (near initialization for ‘colors[0][2]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:48:1: error: expected ‘}’ before ‘loatcolor’
+   48 | loatcolor }},
+      | ^~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:47:33: note: to match this ‘{’
+   47 |         [SchemeTitleNorm]    = {{ titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormf
+      |                                 ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:9: warning: braces around scalar initializer
+   49 |         [SchemeTitleSel]     = {{ titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfl
+      |         ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:9: note: (near initialization for ‘colors[0][3]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:9: warning: braces around scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:9: note: (near initialization for ‘colors[0][3]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:53: warning: excess elements in scalar initializer
+   49 |         [SchemeTitleSel]     = {{ titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfl
+      |                                                     ^~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:53: note: (near initialization for ‘colors[0][3]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:71: warning: excess elements in scalar initializer
+   49 |         [SchemeTitleSel]     = {{ titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfl
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:71: note: (near initialization for ‘colors[0][3]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:93: error: ‘titleselfl’ undeclared here (not in a function); did you mean ‘titleselfgcolor’?
+   49 |         [SchemeTitleSel]     = {{ titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfl
+      |                                                                                             ^~~~~~~~~~
+      |                                                                                             titleselfgcolor
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:93: warning: excess elements in scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:93: note: (near initialization for ‘colors[0][3]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:50:1: error: expected ‘}’ before ‘oatcolor’
+   50 | oatcolor }},
+      | ^~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:49:33: note: to match this ‘{’
+   49 |         [SchemeTitleSel]     = {{ titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfl
+      |                                 ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:10: error: array index in initializer exceeds array bounds
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |          ^~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:10: note: (near initialization for ‘colors[0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:9: warning: braces around scalar initializer
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |         ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:9: note: (near initialization for ‘colors[0][4]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:9: warning: braces around scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:9: note: (near initialization for ‘colors[0][4]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:53: warning: excess elements in scalar initializer
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |                                                     ^~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:53: note: (near initialization for ‘colors[0][4]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:71: warning: excess elements in scalar initializer
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:71: note: (near initialization for ‘colors[0][4]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:93: error: ‘tagsnormfl’ undeclared here (not in a function); did you mean ‘tagsnormfgcolor’?
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |                                                                                             ^~~~~~~~~~
+      |                                                                                             tagsnormfgcolor
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:93: warning: excess elements in scalar initializer
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:93: note: (near initialization for ‘colors[0][4]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:53:1: error: expected ‘}’ before ‘...’ token
+   53 | ...skipping 1 line
+      | ^~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:33: note: to match this ‘{’
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |                                 ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:32: warning: excess elements in array initializer
+   51 |         [SchemeTagsNorm]     = {{ tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfl
+      |                                ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:51:32: note: (near initialization for ‘colors[0]’)
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:60:3: error: expected ‘}’ before ‘;’ token
+   60 | }};
+      |   ^
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:41:36: note: to match this ‘{’
+   41 | static char *colors[][ColCount] = {{
+      |                                    ^
+dwm.c:529:13: warning: ‘applyrules’ declared ‘static’ but never defined [-Wunused-function]
+  529 | static void applyrules(Client *c);
+      |             ^~~~~~~~~~
+dwm.c:530:12: warning: ‘applysizehints’ declared ‘static’ but never defined [-Wunused-function]
+  530 | static int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interact);
+      |            ^~~~~~~~~~~~~~
+dwm.c:531:13: warning: ‘arrange’ declared ‘static’ but never defined [-Wunused-function]
+  531 | static void arrange(Monitor *m);
+      |             ^~~~~~~
+dwm.c:532:13: warning: ‘arrangemon’ declared ‘static’ but never defined [-Wunused-function]
+  532 | static void arrangemon(Monitor *m);
+      |             ^~~~~~~~~~
+dwm.c:533:13: warning: ‘attach’ declared ‘static’ but never defined [-Wunused-function]
+  533 | static void attach(Client *c);
+      |             ^~~~~~
+dwm.c:534:13: warning: ‘attachstack’ declared ‘static’ but never defined [-Wunused-function]
+  534 | static void attachstack(Client *c);
+      |             ^~~~~~~~~~~
+dwm.c:535:13: warning: ‘buttonpress’ used but never defined
+  535 | static void buttonpress(XEvent *e);
+      |             ^~~~~~~~~~~
+dwm.c:536:13: warning: ‘checkotherwm’ declared ‘static’ but never defined [-Wunused-function]
+  536 | static void checkotherwm(void);
+      |             ^~~~~~~~~~~~
+dwm.c:537:13: warning: ‘cleanup’ declared ‘static’ but never defined [-Wunused-function]
+  537 | static void cleanup(void);
+      |             ^~~~~~~
+dwm.c:538:13: warning: ‘cleanupmon’ declared ‘static’ but never defined [-Wunused-function]
+  538 | static void cleanupmon(Monitor *mon);
+      |             ^~~~~~~~~~
+dwm.c:539:13: warning: ‘clientmessage’ used but never defined
+  539 | static void clientmessage(XEvent *e);
+      |             ^~~~~~~~~~~~~
+dwm.c:540:13: warning: ‘configure’ declared ‘static’ but never defined [-Wunused-function]
+  540 | static void configure(Client *c);
+      |             ^~~~~~~~~
+dwm.c:541:13: warning: ‘configurenotify’ used but never defined
+  541 | static void configurenotify(XEvent *e);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:542:13: warning: ‘configurerequest’ used but never defined
+  542 | static void configurerequest(XEvent *e);
+      |             ^~~~~~~~~~~~~~~~
+dwm.c:543:17: warning: ‘createmon’ declared ‘static’ but never defined [-Wunused-function]
+  543 | static Monitor *createmon(void);
+      |                 ^~~~~~~~~
+dwm.c:544:13: warning: ‘destroynotify’ used but never defined
+  544 | static void destroynotify(XEvent *e);
+      |             ^~~~~~~~~~~~~
+dwm.c:545:13: warning: ‘detach’ declared ‘static’ but never defined [-Wunused-function]
+  545 | static void detach(Client *c);
+      |             ^~~~~~
+dwm.c:546:13: warning: ‘detachstack’ declared ‘static’ but never defined [-Wunused-function]
+  546 | static void detachstack(Client *c);
+      |             ^~~~~~~~~~~
+dwm.c:547:17: warning: ‘dirtomon’ declared ‘static’ but never defined [-Wunused-function]
+  547 | static Monitor *dirtomon(int dir);
+      |                 ^~~~~~~~
+dwm.c:548:13: warning: ‘drawbar’ declared ‘static’ but never defined [-Wunused-function]
+  548 | static void drawbar(Monitor *m);
+      |             ^~~~~~~
+dwm.c:549:13: warning: ‘drawbars’ declared ‘static’ but never defined [-Wunused-function]
+  549 | static void drawbars(void);
+      |             ^~~~~~~~
+dwm.c:550:13: warning: ‘drawbarwin’ declared ‘static’ but never defined [-Wunused-function]
+  550 | static void drawbarwin(Bar *bar);
+      |             ^~~~~~~~~~
+dwm.c:554:13: warning: ‘expose’ used but never defined
+  554 | static void expose(XEvent *e);
+      |             ^~~~~~
+dwm.c:555:13: warning: ‘focus’ declared ‘static’ but never defined [-Wunused-function]
+  555 | static void focus(Client *c);
+      |             ^~~~~
+dwm.c:556:13: warning: ‘focusin’ used but never defined
+  556 | static void focusin(XEvent *e);
+      |             ^~~~~~~
+dwm.c:557:13: warning: ‘focusmon’ declared ‘static’ but never defined [-Wunused-function]
+  557 | static void focusmon(const Arg *arg);
+      |             ^~~~~~~~
+dwm.c:559:13: warning: ‘focusstack’ declared ‘static’ but never defined [-Wunused-function]
+  559 | static void focusstack(const Arg *arg);
+      |             ^~~~~~~~~~
+dwm.c:561:13: warning: ‘getatomprop’ declared ‘static’ but never defined [-Wunused-function]
+  561 | static Atom getatomprop(Client *c, Atom prop);
+      |             ^~~~~~~~~~~
+dwm.c:562:12: warning: ‘getrootptr’ declared ‘static’ but never defined [-Wunused-function]
+  562 | static int getrootptr(int *x, int *y);
+      |            ^~~~~~~~~~
+dwm.c:563:13: warning: ‘getstate’ declared ‘static’ but never defined [-Wunused-function]
+  563 | static long getstate(Window w);
+      |             ^~~~~~~~
+dwm.c:564:12: warning: ‘gettextprop’ declared ‘static’ but never defined [-Wunused-function]
+  564 | static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
+      |            ^~~~~~~~~~~
+dwm.c:565:13: warning: ‘grabbuttons’ declared ‘static’ but never defined [-Wunused-function]
+  565 | static void grabbuttons(Client *c, int focused);
+      |             ^~~~~~~~~~~
+dwm.c:569:13: warning: ‘grabkeys’ declared ‘static’ but never defined [-Wunused-function]
+  569 | static void grabkeys(void);
+      |             ^~~~~~~~
+dwm.c:571:13: warning: ‘incnmaster’ declared ‘static’ but never defined [-Wunused-function]
+  571 | static void incnmaster(const Arg *arg);
+      |             ^~~~~~~~~~
+dwm.c:575:13: warning: ‘keypress’ used but never defined
+  575 | static void keypress(XEvent *e);
+      |             ^~~~~~~~
+dwm.c:577:13: warning: ‘killclient’ declared ‘static’ but never defined [-Wunused-function]
+  577 | static void killclient(const Arg *arg);
+      |             ^~~~~~~~~~
+dwm.c:578:13: warning: ‘manage’ declared ‘static’ but never defined [-Wunused-function]
+  578 | static void manage(Window w, XWindowAttributes *wa);
+      |             ^~~~~~
+dwm.c:579:13: warning: ‘mappingnotify’ used but never defined
+  579 | static void mappingnotify(XEvent *e);
+      |             ^~~~~~~~~~~~~
+dwm.c:580:13: warning: ‘maprequest’ used but never defined
+  580 | static void maprequest(XEvent *e);
+      |             ^~~~~~~~~~
+dwm.c:584:13: warning: ‘movemouse’ declared ‘static’ but never defined [-Wunused-function]
+  584 | static void movemouse(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:585:13: warning: ‘nametag’ declared ‘static’ but never defined [-Wunused-function]
+  585 | static void nametag(const Arg *arg);
+      |             ^~~~~~~
+dwm.c:586:13: warning: ‘updatecolors’ declared ‘static’ but never defined [-Wunused-function]
+  586 | static void updatecolors(const Arg *arg);
+      |             ^~~~~~~~~~~~
+dwm.c:587:16: warning: ‘nexttiled’ declared ‘static’ but never defined [-Wunused-function]
+  587 | static Client *nexttiled(Client *c);
+      |                ^~~~~~~~~
+dwm.c:589:13: warning: ‘pop’ declared ‘static’ but never defined [-Wunused-function]
+  589 | static void pop(Client *);
+      |             ^~~
+dwm.c:591:13: warning: ‘propertynotify’ used but never defined
+  591 | static void propertynotify(XEvent *e);
+      |             ^~~~~~~~~~~~~~
+dwm.c:592:13: warning: ‘quit’ declared ‘static’ but never defined [-Wunused-function]
+  592 | static void quit(const Arg *arg);
+      |             ^~~~
+dwm.c:593:17: warning: ‘recttomon’ declared ‘static’ but never defined [-Wunused-function]
+  593 | static Monitor *recttomon(int x, int y, int w, int h);
+      |                 ^~~~~~~~~
+dwm.c:594:13: warning: ‘resize’ declared ‘static’ but never defined [-Wunused-function]
+  594 | static void resize(Client *c, int x, int y, int w, int h, int interact);
+      |             ^~~~~~
+dwm.c:595:13: warning: ‘resizeclient’ declared ‘static’ but never defined [-Wunused-function]
+  595 | static void resizeclient(Client *c, int x, int y, int w, int h);
+      |             ^~~~~~~~~~~~
+dwm.c:596:13: warning: ‘resizemouse’ declared ‘static’ but never defined [-Wunused-function]
+  596 | static void resizemouse(const Arg *arg);
+      |             ^~~~~~~~~~~
+dwm.c:597:13: warning: ‘restack’ declared ‘static’ but never defined [-Wunused-function]
+  597 | static void restack(Monitor *m);
+      |             ^~~~~~~
+dwm.c:598:13: warning: ‘run’ declared ‘static’ but never defined [-Wunused-function]
+  598 | static void run(void);
+      |             ^~~
+dwm.c:599:13: warning: ‘scan’ declared ‘static’ but never defined [-Wunused-function]
+  599 | static void scan(void);
+      |             ^~~~
+dwm.c:603:12: warning: ‘sendevent’ declared ‘static’ but never defined [-Wunused-function]
+  603 | static int sendevent(Client *c, Atom proto);
+      |            ^~~~~~~~~
+dwm.c:605:13: warning: ‘sendmon’ declared ‘static’ but never defined [-Wunused-function]
+  605 | static void sendmon(Client *c, Monitor *m);
+      |             ^~~~~~~
+dwm.c:606:13: warning: ‘setclientstate’ declared ‘static’ but never defined [-Wunused-function]
+  606 | static void setclientstate(Client *c, long state);
+      |             ^~~~~~~~~~~~~~
+dwm.c:607:13: warning: ‘setfocus’ declared ‘static’ but never defined [-Wunused-function]
+  607 | static void setfocus(Client *c);
+      |             ^~~~~~~~
+dwm.c:608:13: warning: ‘setfullscreen’ declared ‘static’ but never defined [-Wunused-function]
+  608 | static void setfullscreen(Client *c, int fullscreen);
+      |             ^~~~~~~~~~~~~
+dwm.c:609:13: warning: ‘setlayout’ declared ‘static’ but never defined [-Wunused-function]
+  609 | static void setlayout(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:610:13: warning: ‘setmfact’ declared ‘static’ but never defined [-Wunused-function]
+  610 | static void setmfact(const Arg *arg);
+      |             ^~~~~~~~
+dwm.c:611:13: warning: ‘setup’ declared ‘static’ but never defined [-Wunused-function]
+  611 | static void setup(void);
+      |             ^~~~~
+dwm.c:612:13: warning: ‘seturgent’ declared ‘static’ but never defined [-Wunused-function]
+  612 | static void seturgent(Client *c, int urg);
+      |             ^~~~~~~~~
+dwm.c:613:13: warning: ‘showhide’ declared ‘static’ but never defined [-Wunused-function]
+  613 | static void showhide(Client *c);
+      |             ^~~~~~~~
+dwm.c:614:13: warning: ‘sigchld’ declared ‘static’ but never defined [-Wunused-function]
+  614 | static void sigchld(int unused);
+      |             ^~~~~~~
+dwm.c:615:13: warning: ‘spawn’ declared ‘static’ but never defined [-Wunused-function]
+  615 | static void spawn(const Arg *arg);
+      |             ^~~~~
+dwm.c:616:13: warning: ‘tag’ declared ‘static’ but never defined [-Wunused-function]
+  616 | static void tag(const Arg *arg);
+      |             ^~~
+dwm.c:617:13: warning: ‘tagmon’ declared ‘static’ but never defined [-Wunused-function]
+  617 | static void tagmon(const Arg *arg);
+      |             ^~~~~~
+dwm.c:618:13: warning: ‘togglebar’ declared ‘static’ but never defined [-Wunused-function]
+  618 | static void togglebar(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:619:13: warning: ‘togglefloating’ declared ‘static’ but never defined [-Wunused-function]
+  619 | static void togglefloating(const Arg *arg);
+      |             ^~~~~~~~~~~~~~
+dwm.c:620:13: warning: ‘toggletag’ declared ‘static’ but never defined [-Wunused-function]
+  620 | static void toggletag(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:621:13: warning: ‘toggleview’ declared ‘static’ but never defined [-Wunused-function]
+  621 | static void toggleview(const Arg *arg);
+      |             ^~~~~~~~~~
+dwm.c:622:13: warning: ‘unfocus’ declared ‘static’ but never defined [-Wunused-function]
+  622 | static void unfocus(Client *c, int setfocus, Client *nextfocus);
+      |             ^~~~~~~
+dwm.c:623:13: warning: ‘unmanage’ declared ‘static’ but never defined [-Wunused-function]
+  623 | static void unmanage(Client *c, int destroyed);
+      |             ^~~~~~~~
+dwm.c:624:13: warning: ‘unmapnotify’ used but never defined
+  624 | static void unmapnotify(XEvent *e);
+      |             ^~~~~~~~~~~
+dwm.c:625:13: warning: ‘updatebarpos’ declared ‘static’ but never defined [-Wunused-function]
+  625 | static void updatebarpos(Monitor *m);
+      |             ^~~~~~~~~~~~
+dwm.c:626:13: warning: ‘updatebars’ declared ‘static’ but never defined [-Wunused-function]
+  626 | static void updatebars(void);
+      |             ^~~~~~~~~~
+dwm.c:627:13: warning: ‘updateclientlist’ declared ‘static’ but never defined [-Wunused-function]
+  627 | static void updateclientlist(void);
+      |             ^~~~~~~~~~~~~~~~
+dwm.c:628:12: warning: ‘updategeom’ declared ‘static’ but never defined [-Wunused-function]
+  628 | static int updategeom(void);
+      |            ^~~~~~~~~~
+dwm.c:629:13: warning: ‘updatenumlockmask’ declared ‘static’ but never defined [-Wunused-function]
+  629 | static void updatenumlockmask(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:630:13: warning: ‘updatesizehints’ declared ‘static’ but never defined [-Wunused-function]
+  630 | static void updatesizehints(Client *c);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:631:13: warning: ‘updatestatus’ declared ‘static’ but never defined [-Wunused-function]
+  631 | static void updatestatus(void);
+      |             ^~~~~~~~~~~~
+dwm.c:632:13: warning: ‘updatetitle’ declared ‘static’ but never defined [-Wunused-function]
+  632 | static void updatetitle(Client *c);
+      |             ^~~~~~~~~~~
+dwm.c:633:13: warning: ‘updatewmhints’ declared ‘static’ but never defined [-Wunused-function]
+  633 | static void updatewmhints(Client *c);
+      |             ^~~~~~~~~~~~~
+dwm.c:634:13: warning: ‘view’ declared ‘static’ but never defined [-Wunused-function]
+  634 | static void view(const Arg *arg);
+      |             ^~~~
+dwm.c:635:16: warning: ‘wintoclient’ declared ‘static’ but never defined [-Wunused-function]
+  635 | static Client *wintoclient(Window w);
+      |                ^~~~~~~~~~~
+dwm.c:636:17: warning: ‘wintomon’ declared ‘static’ but never defined [-Wunused-function]
+  636 | static Monitor *wintomon(Window w);
+      |                 ^~~~~~~~
+dwm.c:637:12: warning: ‘xerror’ declared ‘static’ but never defined [-Wunused-function]
+  637 | static int xerror(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~
+dwm.c:638:12: warning: ‘xerrordummy’ declared ‘static’ but never defined [-Wunused-function]
+  638 | static int xerrordummy(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~~~~~~
+dwm.c:639:12: warning: ‘xerrorstart’ declared ‘static’ but never defined [-Wunused-function]
+  639 | static int xerrorstart(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~~~~~~
+dwm.c:640:13: warning: ‘zoom’ declared ‘static’ but never defined [-Wunused-function]
+  640 | static void zoom(const Arg *arg);
+      |             ^~~~
+In file included from patch/include.h:2,
+                 from dwm.c:644:
+patch/bar_indicators.h:19:13: warning: ‘drawindicator’ declared ‘static’ but never defined [-Wunused-function]
+   19 | static void drawindicator(Monitor *m, Client *c, unsigned int occ, int x, int y, int w, int h, unsigned int tag, int filled, int invert, int type);
+      |             ^~~~~~~~~~~~~
+In file included from patch/include.h:2,
+                 from dwm.c:644:
+patch/bar_indicators.h:20:13: warning: ‘drawstateindicator’ declared ‘static’ but never defined [-Wunused-function]
+   20 | static void drawstateindicator(Monitor *m, Client *c, unsigned int occ, int x, int y, int w, int h, unsigned int tag, int filled, int invert);
+      |             ^~~~~~~~~~~~~~~~~~
+In file included from patch/include.h:3,
+                 from dwm.c:644:
+patch/bar_tagicons.h:7:15: warning: ‘tagicon’ declared ‘static’ but never defined [-Wunused-function]
+    7 | static char * tagicon(Monitor *m, int tag);
+      |               ^~~~~~~
+In file included from patch/include.h:27,
+                 from dwm.c:644:
+patch/bar_ltsymbol.h:1:12: warning: ‘width_ltsymbol’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static int width_ltsymbol(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~~~~~
+patch/bar_ltsymbol.h:2:12: warning: ‘draw_ltsymbol’ declared ‘static’ but never defined [-Wunused-function]
+    2 | static int draw_ltsymbol(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~~~~
+patch/bar_ltsymbol.h:3:12: warning: ‘click_ltsymbol’ declared ‘static’ but never defined [-Wunused-function]
+    3 | static int click_ltsymbol(Bar *bar, Arg *arg, BarArg *a);
+      |            ^~~~~~~~~~~~~~
+In file included from patch/include.h:36,
+                 from dwm.c:644:
+patch/bar_status.h:1:12: warning: ‘width_status’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static int width_status(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~~~
+patch/bar_status.h:5:12: warning: ‘draw_status’ declared ‘static’ but never defined [-Wunused-function]
+    5 | static int draw_status(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~~
+patch/bar_status.h:9:12: warning: ‘click_status’ declared ‘static’ but never defined [-Wunused-function]
+    9 | static int click_status(Bar *bar, Arg *arg, BarArg *a);
+      |            ^~~~~~~~~~~~
+In file included from patch/include.h:51,
+                 from dwm.c:644:
+patch/bar_tags.h:1:12: warning: ‘width_tags’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static int width_tags(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~
+patch/bar_tags.h:2:12: warning: ‘draw_tags’ declared ‘static’ but never defined [-Wunused-function]
+    2 | static int draw_tags(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~
+patch/bar_tags.h:3:12: warning: ‘click_tags’ declared ‘static’ but never defined [-Wunused-function]
+    3 | static int click_tags(Bar *bar, Arg *arg, BarArg *a);
+      |            ^~~~~~~~~~
+In file included from patch/include.h:57,
+                 from dwm.c:644:
+patch/bar_wintitle.h:1:12: warning: ‘width_wintitle’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static int width_wintitle(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~~~~~
+patch/bar_wintitle.h:2:12: warning: ‘draw_wintitle’ declared ‘static’ but never defined [-Wunused-function]
+    2 | static int draw_wintitle(Bar *bar, BarArg *a);
+      |            ^~~~~~~~~~~~~
+patch/bar_wintitle.h:3:12: warning: ‘click_wintitle’ declared ‘static’ but never defined [-Wunused-function]
+    3 | static int click_wintitle(Bar *bar, Arg *arg, BarArg *a);
+      |            ^~~~~~~~~~~~~~
+In file included from patch/include.h:98,
+                 from dwm.c:644:
+patch/cmdcustomize.h:1:14: warning: ‘help’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static char* help();
+      |              ^~~~
+In file included from patch/include.h:104,
+                 from dwm.c:644:
+patch/cyclelayouts.h:1:13: warning: ‘cyclelayout’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void cyclelayout(const Arg *arg);
+      |             ^~~~~~~~~~~
+In file included from patch/include.h:136,
+                 from dwm.c:644:
+patch/focusurgent.h:1:13: warning: ‘focusurgent’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void focusurgent(const Arg *arg);
+      |             ^~~~~~~~~~~
+In file included from patch/include.h:194,
+                 from dwm.c:644:
+patch/roundedcorners.h:1:13: warning: ‘drawroundedcorners’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void drawroundedcorners(Client *c);
+      |             ^~~~~~~~~~~~~~~~~~
+In file included from patch/include.h:265,
+                 from dwm.c:644:
+patch/vanitygaps.h:2:13: warning: ‘defaultgaps’ declared ‘static’ but never defined [-Wunused-function]
+    2 | static void defaultgaps(const Arg *arg);
+      |             ^~~~~~~~~~~
+patch/vanitygaps.h:3:13: warning: ‘incrgaps’ declared ‘static’ but never defined [-Wunused-function]
+    3 | static void incrgaps(const Arg *arg);
+      |             ^~~~~~~~
+patch/vanitygaps.h:4:13: warning: ‘incrigaps’ declared ‘static’ but never defined [-Wunused-function]
+    4 | static void incrigaps(const Arg *arg);
+      |             ^~~~~~~~~
+patch/vanitygaps.h:5:13: warning: ‘incrogaps’ declared ‘static’ but never defined [-Wunused-function]
+    5 | static void incrogaps(const Arg *arg);
+      |             ^~~~~~~~~
+patch/vanitygaps.h:6:13: warning: ‘incrohgaps’ declared ‘static’ but never defined [-Wunused-function]
+    6 | static void incrohgaps(const Arg *arg);
+      |             ^~~~~~~~~~
+patch/vanitygaps.h:7:13: warning: ‘incrovgaps’ declared ‘static’ but never defined [-Wunused-function]
+    7 | static void incrovgaps(const Arg *arg);
+      |             ^~~~~~~~~~
+patch/vanitygaps.h:8:13: warning: ‘incrihgaps’ declared ‘static’ but never defined [-Wunused-function]
+    8 | static void incrihgaps(const Arg *arg);
+      |             ^~~~~~~~~~
+patch/vanitygaps.h:9:13: warning: ‘incrivgaps’ declared ‘static’ but never defined [-Wunused-function]
+    9 | static void incrivgaps(const Arg *arg);
+      |             ^~~~~~~~~~
+patch/vanitygaps.h:10:13: warning: ‘togglegaps’ declared ‘static’ but never defined [-Wunused-function]
+   10 | static void togglegaps(const Arg *arg);
+      |             ^~~~~~~~~~
+In file included from patch/include.h:265,
+                 from dwm.c:644:
+patch/vanitygaps.h:14:13: warning: ‘getgaps’ declared ‘static’ but never defined [-Wunused-function]
+   14 | static void getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc);
+      |             ^~~~~~~
+patch/vanitygaps.h:16:13: warning: ‘setgaps’ declared ‘static’ but never defined [-Wunused-function]
+   16 | static void setgaps(int oh, int ov, int ih, int iv);
+      |             ^~~~~~~
+In file included from patch/include.h:281,
+                 from dwm.c:644:
+patch/layout_bstack.h:1:13: warning: ‘bstack’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void bstack(Monitor *m);
+      |             ^~~~~~
+In file included from patch/include.h:284,
+                 from dwm.c:644:
+patch/layout_bstackhoriz.h:1:13: warning: ‘bstackhoriz’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void bstackhoriz(Monitor *m);
+      |             ^~~~~~~~~~~
+In file included from patch/include.h:287,
+                 from dwm.c:644:
+patch/layout_centeredmaster.h:1:13: warning: ‘centeredmaster’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void centeredmaster(Monitor *m);
+      |             ^~~~~~~~~~~~~~
+In file included from patch/include.h:290,
+                 from dwm.c:644:
+patch/layout_centeredfloatingmaster.h:1:13: warning: ‘centeredfloatingmaster’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void centeredfloatingmaster(Monitor *m);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from patch/include.h:293,
+                 from dwm.c:644:
+patch/layout_columns.h:1:13: warning: ‘col’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void col(Monitor *);
+      |             ^~~
+In file included from patch/include.h:296,
+                 from dwm.c:644:
+patch/layout_deck.h:1:13: warning: ‘deck’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void deck(Monitor *m);
+      |             ^~~~
+In file included from patch/include.h:299,
+                 from dwm.c:644:
+patch/layout_fibonacci.h:2:13: warning: ‘dwindle’ declared ‘static’ but never defined [-Wunused-function]
+    2 | static void dwindle(Monitor *m);
+      |             ^~~~~~~
+patch/layout_fibonacci.h:4:13: warning: ‘fibonacci’ declared ‘static’ but never defined [-Wunused-function]
+    4 | static void fibonacci(Monitor *m, int s);
+      |             ^~~~~~~~~
+patch/layout_fibonacci.h:6:13: warning: ‘spiral’ declared ‘static’ but never defined [-Wunused-function]
+    6 | static void spiral(Monitor *m);
+      |             ^~~~~~
+In file included from patch/include.h:302,
+                 from dwm.c:644:
+patch/layout_flextile-deluxe.h:1:13: warning: ‘flextile’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void flextile(Monitor *m);
+      |             ^~~~~~~~
+patch/layout_flextile-deluxe.h:2:13: warning: ‘getfactsforrange’ declared ‘static’ but never defined [-Wunused-function]
+    2 | static void getfactsforrange(Monitor *m, int an, int ai, int size, int *rest, float *fact);
+      |             ^~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:3:13: warning: ‘mirrorlayout’ declared ‘static’ but never defined [-Wunused-function]
+    3 | static void mirrorlayout(const Arg *arg);
+      |             ^~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:4:13: warning: ‘rotatelayoutaxis’ declared ‘static’ but never defined [-Wunused-function]
+    4 | static void rotatelayoutaxis(const Arg *arg);
+      |             ^~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:8:13: warning: ‘incnstack’ declared ‘static’ but never defined [-Wunused-function]
+    8 | static void incnstack(const Arg *arg);
+      |             ^~~~~~~~~
+patch/layout_flextile-deluxe.h:11:13: warning: ‘setflexsymbols’ declared ‘static’ but never defined [-Wunused-function]
+   11 | static void setflexsymbols(Monitor *m, unsigned int n);
+      |             ^~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:12:13: warning: ‘monoclesymbols’ declared ‘static’ but never defined [-Wunused-function]
+   12 | static void monoclesymbols(Monitor *m, unsigned int n);
+      |             ^~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:13:13: warning: ‘decksymbols’ declared ‘static’ but never defined [-Wunused-function]
+   13 | static void decksymbols(Monitor *m, unsigned int n);
+      |             ^~~~~~~~~~~
+patch/layout_flextile-deluxe.h:16:13: warning: ‘layout_no_split’ declared ‘static’ but never defined [-Wunused-function]
+   16 | static void layout_no_split(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:17:13: warning: ‘layout_split_vertical’ declared ‘static’ but never defined [-Wunused-function]
+   17 | static void layout_split_vertical(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:18:13: warning: ‘layout_split_horizontal’ declared ‘static’ but never defined [-Wunused-function]
+   18 | static void layout_split_horizontal(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:19:13: warning: ‘layout_split_vertical_dual_stack’ declared ‘static’ but never defined [-Wunused-function]
+   19 | static void layout_split_vertical_dual_stack(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:20:13: warning: ‘layout_split_horizontal_dual_stack’ declared ‘static’ but never defined [-Wunused-function]
+   20 | static void layout_split_horizontal_dual_stack(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:21:13: warning: ‘layout_split_centered_vertical’ declared ‘static’ but never defined [-Wunused-function]
+   21 | static void layout_split_centered_vertical(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:22:13: warning: ‘layout_split_centered_horizontal’ declared ‘static’ but never defined [-Wunused-function]
+   22 | static void layout_split_centered_horizontal(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:23:13: warning: ‘layout_floating_master’ declared ‘static’ but never defined [-Wunused-function]
+   23 | static void layout_floating_master(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:24:13: warning: ‘layout_split_vertical_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   24 | static void layout_split_vertical_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:25:13: warning: ‘layout_split_horizontal_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   25 | static void layout_split_horizontal_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:26:13: warning: ‘layout_split_vertical_dual_stack_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   26 | static void layout_split_vertical_dual_stack_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:27:13: warning: ‘layout_split_horizontal_dual_stack_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   27 | static void layout_split_horizontal_dual_stack_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:28:13: warning: ‘layout_split_centered_vertical_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   28 | static void layout_split_centered_vertical_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:29:13: warning: ‘layout_split_centered_horizontal_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   29 | static void layout_split_centered_horizontal_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:30:13: warning: ‘layout_floating_master_fixed’ declared ‘static’ but never defined [-Wunused-function]
+   30 | static void layout_floating_master_fixed(Monitor *m, int x, int y, int h, int w, int ih, int iv, int n);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:33:13: warning: ‘arrange_left_to_right’ declared ‘static’ but never defined [-Wunused-function]
+   33 | static void arrange_left_to_right(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:34:13: warning: ‘arrange_top_to_bottom’ declared ‘static’ but never defined [-Wunused-function]
+   34 | static void arrange_top_to_bottom(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:35:13: warning: ‘arrange_monocle’ declared ‘static’ but never defined [-Wunused-function]
+   35 | static void arrange_monocle(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:36:13: warning: ‘arrange_gapplessgrid’ declared ‘static’ but never defined [-Wunused-function]
+   36 | static void arrange_gapplessgrid(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:37:13: warning: ‘arrange_gapplessgrid_alt1’ declared ‘static’ but never defined [-Wunused-function]
+   37 | static void arrange_gapplessgrid_alt1(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:38:13: warning: ‘arrange_gapplessgrid_alt2’ declared ‘static’ but never defined [-Wunused-function]
+   38 | static void arrange_gapplessgrid_alt2(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:39:13: warning: ‘arrange_gridmode’ declared ‘static’ but never defined [-Wunused-function]
+   39 | static void arrange_gridmode(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:40:13: warning: ‘arrange_horizgrid’ declared ‘static’ but never defined [-Wunused-function]
+   40 | static void arrange_horizgrid(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:41:13: warning: ‘arrange_dwindle’ declared ‘static’ but never defined [-Wunused-function]
+   41 | static void arrange_dwindle(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~~
+patch/layout_flextile-deluxe.h:42:13: warning: ‘arrange_spiral’ declared ‘static’ but never defined [-Wunused-function]
+   42 | static void arrange_spiral(Monitor *m, int ax, int ay, int ah, int aw, int ih, int iv, int n, int an, int ai);
+      |             ^~~~~~~~~~~~~~
+In file included from patch/include.h:305,
+                 from dwm.c:644:
+patch/layout_gapplessgrid.h:1:13: warning: ‘gaplessgrid’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void gaplessgrid(Monitor *m);
+      |             ^~~~~~~~~~~
+In file included from patch/include.h:308,
+                 from dwm.c:644:
+patch/layout_grid.h:1:13: warning: ‘grid’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void grid(Monitor *m);
+      |             ^~~~
+In file included from patch/include.h:311,
+                 from dwm.c:644:
+patch/layout_horizgrid.h:1:13: warning: ‘horizgrid’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void horizgrid(Monitor *m);
+      |             ^~~~~~~~~
+In file included from patch/include.h:314,
+                 from dwm.c:644:
+patch/layout_monocle.h:1:13: warning: ‘monocle’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void monocle(Monitor *m);
+      |             ^~~~~~~
+In file included from patch/include.h:317,
+                 from dwm.c:644:
+patch/layout_nrowgrid.h:1:13: warning: ‘nrowgrid’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void nrowgrid(Monitor *m);
+      |             ^~~~~~~~
+In file included from patch/include.h:320,
+                 from dwm.c:644:
+patch/layout_tile.h:1:13: warning: ‘tile’ declared ‘static’ but never defined [-Wunused-function]
+    1 | static void tile(Monitor *);
+      |             ^~~~
+In file included from config.h:239,
+                 from dwm.c:732:
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:41:14: warning: ‘colors’ defined but not used [-Wunused-variable]
+   41 | static char *colors[][ColCount] = {{
+      |              ^~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:39:13: warning: ‘urgfloatcolor’ defined but not used [-Wunused-variable]
+   39 | static char urgfloatcolor[]              = "#db8fd9";
+      |             ^~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:38:13: warning: ‘urgbordercolor’ defined but not used [-Wunused-variable]
+   38 | static char urgbordercolor[]             = "#29558F";
+      |             ^~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:37:13: warning: ‘urgbgcolor’ defined but not used [-Wunused-variable]
+   37 | static char urgbgcolor[]                 = "#29558F";
+      |             ^~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:36:13: warning: ‘urgfgcolor’ defined but not used [-Wunused-variable]
+   36 | static char urgfgcolor[]                 = "#a2c5de";
+      |             ^~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:34:13: warning: ‘hidfloatcolor’ defined but not used [-Wunused-variable]
+   34 | static char hidfloatcolor[]              = "#f76e0c";
+      |             ^~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:33:13: warning: ‘hidbordercolor’ defined but not used [-Wunused-variable]
+   33 | static char hidbordercolor[]             = "#a2c5de";
+      |             ^~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:32:13: warning: ‘hidbgcolor’ defined but not used [-Wunused-variable]
+   32 | static char hidbgcolor[]                 = "#3367A2";
+      |             ^~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:31:13: warning: ‘hidfgcolor’ defined but not used [-Wunused-variable]
+   31 | static char hidfgcolor[]                 = "#a2c5de";
+      |             ^~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:29:13: warning: ‘tagsselfloatcolor’ defined but not used [-Wunused-variable]
+   29 | static char tagsselfloatcolor[]          = "#005577";
+      |             ^~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:28:13: warning: ‘tagsselbordercolor’ defined but not used [-Wunused-variable]
+   28 | static char tagsselbordercolor[]         = "#a2c5de";
+      |             ^~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:27:13: warning: ‘tagsselbgcolor’ defined but not used [-Wunused-variable]
+   27 | static char tagsselbgcolor[]             = "#3367A2";
+      |             ^~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:26:13: warning: ‘tagsselfgcolor’ defined but not used [-Wunused-variable]
+   26 | static char tagsselfgcolor[]             = "#a2c5de";
+      |             ^~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:24:13: warning: ‘tagsnormfloatcolor’ defined but not used [-Wunused-variable]
+   24 | static char tagsnormfloatcolor[]         = "#db8fd9";
+      |             ^~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:19:13: warning: ‘titleselfloatcolor’ defined but not used [-Wunused-variable]
+   19 | static char titleselfloatcolor[]         = "#005577";
+      |             ^~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:14:13: warning: ‘titlenormfloatcolor’ defined but not used [-Wunused-variable]
+   14 | static char titlenormfloatcolor[]        = "#db8fd9";
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:9:13: warning: ‘selfloatcolor’ defined but not used [-Wunused-variable]
+    9 | static char selfloatcolor[]              = "#005577";
+      |             ^~~~~~~~~~~~~
+/home/quantumish/.cache/wal/colors-wal-dwm2.h:4:13: warning: ‘normfloatcolor’ defined but not used [-Wunused-variable]
+    4 | static char normfloatcolor[]             = "#db8fd9";
+      |             ^~~~~~~~~~~~~~
+In file included from dwm.c:732:
+config.h:90:20: warning: ‘fonts’ defined but not used [-Wunused-variable]
+   90 | static const char *fonts[]               = { "monospace:size=10" };
+      |                    ^~~~~
+In file included from dwm.c:732:
+config.h:69:12: warning: ‘floatindicatortype’ defined but not used [-Wunused-variable]
+   69 | static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
+      |            ^~~~~~~~~~~~~~~~~~
+config.h:68:12: warning: ‘tiledindicatortype’ defined but not used [-Wunused-variable]
+   68 | static int tiledindicatortype            = INDICATOR_NONE;
+      |            ^~~~~~~~~~~~~~~~~~
+config.h:67:12: warning: ‘tagindicatortype’ defined but not used [-Wunused-variable]
+   67 | static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
+      |            ^~~~~~~~~~~~~~~~
+dwm.c:729:21: warning: ‘wmcheckwin’ defined but not used [-Wunused-variable]
+  729 | static Window root, wmcheckwin;
+      |                     ^~~~~~~~~~
+dwm.c:729:15: warning: ‘root’ defined but not used [-Wunused-variable]
+  729 | static Window root, wmcheckwin;
+      |               ^~~~
+dwm.c:728:24: warning: ‘selmon’ defined but not used [-Wunused-variable]
+  728 | static Monitor *mons, *selmon;
+      |                        ^~~~~~
+dwm.c:728:17: warning: ‘mons’ defined but not used [-Wunused-variable]
+  728 | static Monitor *mons, *selmon;
+      |                 ^~~~
+dwm.c:727:13: warning: ‘drw’ defined but not used [-Wunused-variable]
+  727 | static Drw *drw;
+      |             ^~~
+dwm.c:726:17: warning: ‘dpy’ defined but not used [-Wunused-variable]
+  726 | static Display *dpy;
+      |                 ^~~
+dwm.c:725:14: warning: ‘scheme’ defined but not used [-Wunused-variable]
+  725 | static Clr **scheme;
+      |              ^~~~~~
+dwm.c:724:13: warning: ‘cursor’ defined but not used [-Wunused-variable]
+  724 | static Cur *cursor[CurLast];
+      |             ^~~~~~
+dwm.c:723:12: warning: ‘running’ defined but not used [-Wunused-variable]
+  723 | static int running = 1;
+      |            ^~~~~~~
+dwm.c:718:29: warning: ‘netatom’ defined but not used [-Wunused-variable]
+  718 | static Atom wmatom[WMLast], netatom[NetLast];
+      |                             ^~~~~~~
+dwm.c:718:13: warning: ‘wmatom’ defined but not used [-Wunused-variable]
+  718 | static Atom wmatom[WMLast], netatom[NetLast];
+      |             ^~~~~~
+dwm.c:686:15: warning: ‘handler’ defined but not used [-Wunused-variable]
+  686 | static void (*handler[LASTEvent]) (XEvent *) = {
+      |               ^~~~~~~
+dwm.c:685:21: warning: ‘numlockmask’ defined but not used [-Wunused-variable]
+  685 | static unsigned int numlockmask = 0;
+      |                     ^~~~~~~~~~~
+dwm.c:684:14: warning: ‘xerrorxlib’ defined but not used [-Wunused-variable]
+  684 | static int (*xerrorxlib)(Display *, XErrorEvent *);
+      |              ^~~~~~~~~~
+dwm.c:679:12: warning: ‘ignoreconfigurerequests’ defined but not used [-Wunused-variable]
+  679 | static int ignoreconfigurerequests = 0;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+dwm.c:674:12: warning: ‘lrpad’ defined but not used [-Wunused-variable]
+  674 | static int lrpad;            /* sum of left and right padding for text */
+      |            ^~~~~
+dwm.c:673:12: warning: ‘bh’ defined but not used [-Wunused-variable]
+  673 | static int bh;               /* bar geometry */
+      |            ^~
+dwm.c:672:16: warning: ‘sh’ defined but not used [-Wunused-variable]
+  672 | static int sw, sh;           /* X display screen geometry width, height */
+      |                ^~
+dwm.c:672:12: warning: ‘sw’ defined but not used [-Wunused-variable]
+  672 | static int sw, sh;           /* X display screen geometry width, height */
+      |            ^~
+dwm.c:671:12: warning: ‘screen’ defined but not used [-Wunused-variable]
+  671 | static int screen;
+      |            ^~~~~~
+dwm.c:651:13: warning: ‘stext’ defined but not used [-Wunused-variable]
+  651 | static char stext[512];
+      |             ^~~~~
+dwm.c:647:19: warning: ‘broken’ defined but not used [-Wunused-const-variable=]
+  647 | static const char broken[] = "broken";
+      |                   ^~~~~~
+In file included from patch/include.h:302,
+                 from dwm.c:644:
+patch/layout_flextile-deluxe.h:106:13: warning: ‘tilesymb’ defined but not used [-Wunused-variable]
+  106 | static char tilesymb[] = {
+      |             ^~~~~~~~
+patch/layout_flextile-deluxe.h:73:13: warning: ‘layoutsymb’ defined but not used [-Wunused-variable]
+   73 | static char layoutsymb[] = {
+      |             ^~~~~~~~~~
+make: *** [Makefile:24: dwm.o] Error 1

@@ -1,0 +1,8 @@
+set selection-clipboard clipboard
+
+set recolor "true"
+set recolor-darkcolor "{background}"
+set recolor-lightcolor "{foreground}"
+set completion-bg "{foreground}"
+set completion-fg "{background}"
+set completion-highlight-bg "{color6}"
