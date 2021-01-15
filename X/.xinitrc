@@ -1,7 +1,7 @@
-xmodmap ~/.config/X/.(xmodmap &
+xmodmap ~/.config/X/.xmodmap &
 xbindkeys &
 sh ~/.config/X/xcape.sh & 
-feh --bg-fill ~/Downloads/firewatch-galaxy.jpg &
+feh --bg-fill ~/.config/wallpapers/firewatch-galaxy.jpg &
 xrandr --output DP-5 --rotate left --left-of HDMI-0 &
 slstatus &
 emacs --daemon &
