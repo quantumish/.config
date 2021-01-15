@@ -1,5 +1,6 @@
+xmodmap ~/.config/X/.(xmodmap &
 xbindkeys &
-xmodmap ~/.config/.XSxmodmap & 
+sh ~/.config/X/xcape.sh & 
 feh --bg-fill ~/Downloads/firewatch-galaxy.jpg &
 xrandr --output DP-5 --rotate left --left-of HDMI-0 &
 slstatus &

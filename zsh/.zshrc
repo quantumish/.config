@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ydl="youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s'"
 alias neofetch="neofetch --ascii ~/.config/neofetch/arch.ascii"
-alias gs="git status"
+alias gs="git status")
 
 function recompile() {
     cd $1
@@ -124,7 +124,9 @@ function themeage() {
     xdotool key alt+r &> /dev/null
     emacsclient --eval "(load-theme 'ewal-doom-one)" &> /dev/null
     /home/quantumish/.local/bin/pywalfox update
-    python ~/test.py colors-wal-herbe.h
+    python ~/test.py colors-wal-dwm2
+    python ~/test.py colors-wal-dmenu2
+    python ~/test.py zathurarc
     python ~/test.py colors-vis
     recompile ~/herbe
     recompile ~/dmenu
@@ -140,7 +142,7 @@ WALLPAPERS=("firewatch-monochrome.jpg" "firewatch-red.png" "firewatch-galaxy.jpg
 
 function event() {
     RAND_INDEX="$(shuf -i 1-${#EVENTS[@]} -n 1)"
-    herbe ${EVENTS[RAND_INDEX]} && themeage ~/Downloads/${WALLPAPERS[RAND_INDEX]}
+    notify-send ${EVENTS[RAND_INDEX]} && themeage ~/.config/wallpapers/${WALLPAPERS[RAND_INDEX]}
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
