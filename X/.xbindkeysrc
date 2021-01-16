@@ -43,6 +43,9 @@
 "mpc next"
   Mod4+Mod2+Shift + l
 
+"sleep 0.1 ; xdotool type \\delta"
+  Release+alt+Shift + l + d
+
 # Prev mpd
 "mpc prev"
   Mod4+Mod2+Shift + h
@@ -85,7 +88,10 @@
 
 # Toggl on the fly
 "python3 ~/productivity/toggl.py"
-  alt + s
+alt + s
+
+"scrot"
+alt + shift + s
 
 "python3 ~/productivity/spotlight.py"
   Mod2+Mod4 + space
