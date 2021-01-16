@@ -28,4 +28,9 @@ Based off of [this blog post](https://stevelosh.com/blog/2012/10/a-modern-space-
 Custom pywal templates and a custom dwm patch allow for changing essentially everything's colors with pywal. [ewal](https://gitlab.com/jjzmajic/ewal) works great for Emacs.
 
 ## dmenu scripts
-TODO: coming soon
+
+![dmenu spotlight](./screenshots/spotlight.gif)
+
+Spotlight recreated in dmenu: able to open executables like `dmenu_run`, open files from anywhere, use `feh` for images, suggest more complicated commands from history, and view Org mode tasks. 
+
+Scripts are in dmenu/index.py and dmenu/spotlight.py respectively.
