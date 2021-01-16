@@ -25,15 +25,27 @@ Based off of [this blog post](https://stevelosh.com/blog/2012/10/a-modern-space-
 
 ## Pywal
 
-Custom pywal templates and a custom dwm patch allow for changing essentially everything's colors with pywal. [ewal](https://gitlab.com/jjzmajic/ewal) works great for Emacs.
+Custom pywal templates and a custom dwm patch allow for changing essentially everything's colors with pywal. [ewal](https://gitlab.com/jjzmajic/ewal) works great for Emacs. 
+
+One bash script `themeage` takes a background and updates everything.
+![themeage](./screenshots/walls.gif)
 
 ## dwm and dmenu patches
 For dwm: vanity gaps, ability to rename tags without recompile, cmdcustomize, variety of bar patches, focusonclick, and finally all the layout patches available.
 
+For dmenu: fuzzy matching, match highlighting, priority item highlight, patch for customizing dmenu position and width
+
 ## dmenu scripts
+No guarantees anything here will work, all incredibly hacky.
 
 ![dmenu spotlight](./screenshots/spotlight.gif)
 
 Spotlight recreated in dmenu: able to open executables like `dmenu_run`, open files from anywhere, use `feh` for images, suggest more complicated commands from history, and view Org mode tasks. 
 
-Scripts are in dmenu/index.py and dmenu/spotlight.py respectively.
+Scripts are in dmenu/index.py and dmenu/spotlight.py.
+
+![dmenu toggl](./screenshots/toggl.gif)
+
+Toggl interface for dmenu that suggests Org Mode tasks and highlights them based on Org Mode priority. Also sets slstatus module.
+
+Script is in dmenu/toggl.py.

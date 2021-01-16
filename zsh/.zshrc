@@ -111,7 +111,7 @@ alias gs="git status"
 function recompile() {
     cd $1
     sudo make clean install &> /dev/null
-    cd -
+    cd ~
 }
 
 function fix_titles() {
@@ -124,13 +124,13 @@ function themeage() {
     xdotool key alt+r &> /dev/null
     emacsclient --eval "(load-theme 'ewal-doom-one)" &> /dev/null
     /home/quantumish/.local/bin/pywalfox update
-    python ~/test.py colors-wal-dwm2
-    python ~/test.py colors-wal-dmenu2
+    python ~/test.py colors-wal-dwm2.h
+    python ~/test.py colors-wal-dmenu2.h
     python ~/test.py zathurarc
     python ~/test.py colors-vis
-    recompile ~/herbe
-    recompile ~/dmenu
-    recompile ~/st
+    #recompile ~/herbe
+    recompile ~/.config/dmenu
+    #recompile ~/st
 }
 
 function say() {
