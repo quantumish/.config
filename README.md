@@ -9,7 +9,6 @@
 - Editor: [emacs](https://www.gnu.org/software/emacs/) - the one true editor
 - Launcher: [dmenu](https://tools.suckless.org/dmenu/) - suckless spotlight with flexibility
 - Status bar: [slstatus](https://tools.suckless.org/slstatus/) - a suckless bar
-- Lock screen: [slock](https://tools.suckless.org/slock/) - hands off my machine
 - PDF viewer: [zathura](https://pwmt.org/projects/zathura/) - the pretty pdf viewer
 - Notifications: [dunst](https://github.com/dunst-project/dunst) - works with dbus which is a plus
 - Keybinds: [xmodmap](https://wiki.archlinux.org/index.php/xmodmap), [xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys), [xcape](https://github.com/alols/xcape) - all the keybinds
