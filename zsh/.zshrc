@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 alias ydl="youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s'"
 alias neofetch="neofetch --ascii ~/.config/neofetch/arch.ascii"
 alias gs="git status"
+alias nano=mg
 
 function recompile() {
     cd $1

@@ -67,7 +67,7 @@ static const struct arg args[] = {
   /* function format          argument */
     { run_command, "襤 %s | ",    "cat $HOME/productivity/.current-toggl" },
     { run_command, "ﱘ %s | ",    "mpc -f '%artist% - %title%\n'" },
-    { datetime, "%s |",           " %a %d %b %T" },
+    { datetime, "%s |",           " %a %d %b %r" },
     { cpu_perc, "  %s",     NULL },
     { run_command, "  %2s", "nvidia-smi --query-gpu='utilization.gpu' --format=csv,noheader,nounits | tr '\n' ' ' | cut -c1-" },
     { ram_perc, " ﲭ %2s",     NULL },
