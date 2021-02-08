@@ -3,18 +3,24 @@
 # xbindkeys configuration #
 ###########################
 
-keystate_numlock = enable
-keystate_scrolllock= enable
+# keystate_numlock = enable
+# keystate_scrolllock = enable
 
 ###########################
 #  General functionality  #
 ###########################
 
 "amixer set Master 5%+ unmute"
-Control+Mod4+Mod2+Shift + k
+XF86AudioRaiseVolume
 
 "amixer set Master 5%- unmute"
-Control+Mod4+Mod2+Shift + j
+XF86AudioLowerVolume
+
+"sh ~/.config/focus.sh"
+alt + shift + f
+
+"python ~/.config/modeset.py 'normal'"
+m:0x20 + c:37 + F1
 
 "scrot"
 alt + shift + s
@@ -25,6 +31,15 @@ alt + shift + s
 
 "emacsc"
 F1
+
+"st"
+F2
+
+"firefox"
+F3
+
+""
+F4
 
 ###########################
 #  various dmenu scripts  #
