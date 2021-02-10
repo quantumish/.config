@@ -25,6 +25,9 @@ m:0x20 + c:37 + F1
 "scrot"
 alt + shift + s
 
+"rofi -show calc -modi calc -no-show-match -no-sort"
+alt + shift + q
+
 ###########################
 #    Quick app access!    #
 ###########################
