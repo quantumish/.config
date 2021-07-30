@@ -6,3 +6,7 @@ set recolor-lightcolor "{foreground}"
 set completion-bg "{foreground}"
 set completion-fg "{background}"
 set completion-highlight-bg "{color6}"
+
+set render-loading false
+set render-loading-bg "#0f111a"
+set filemonitor signal

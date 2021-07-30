@@ -10,11 +10,43 @@
 #  General functionality  #
 ###########################
 
-"amixer set Master 5%+ unmute"
+# Increase volume
+"amixer set Master 5%+"
 XF86AudioRaiseVolume
 
-"amixer set Master 5%- unmute"
+# Decrease volume
+"amixer set Master 5%-"
 XF86AudioLowerVolume
+
+# Increase volume (alt)
+"amixer set Master 5%+"
+Control+Mod2+Mod4+Shift + k
+
+# Decrease volume (alt)
+"amixer set Master 5%-"
+Control+Mod2+Mod4+Shift + j
+
+# Toggle volume
+"amixer set Master toggle"
+XF86AudioMute
+
+"dmenu < /dev/null | emacsclient --eval "
+alt + shift + control + p
+
+"bash ~/.config/rofi/applets/menu/screenshot.sh"
+Print
+
+"bash ~/.config/rofi/applets/menu/powermenu.sh"
+Pause
+
+"bash ~/.config/rofi/applets/menu/apps.sh"
+Scroll_Lock
+
+"bash ~/.config/rofi/launchers/text/launcher.sh"
+alt + p
+
+"bash ~/.config/rofi/launchers/ribbon/launcher.sh"
+alt + shift + p
 
 "sh ~/.config/focus.sh"
 alt + shift + f
@@ -22,18 +54,15 @@ alt + shift + f
 "python ~/.config/modeset.py 'normal'"
 m:0x20 + c:37 + F1
 
-"scrot"
-alt + shift + s
-
 "rofi -show calc -modi calc -no-show-match -no-sort"
-alt + shift + q
+XF86Calculator
 
 ###########################
 #    Quick app access!    #
 ###########################
 
-"emacsc"
-F1
+# "emacsc"
+# F1
 
 "st"
 F2
@@ -43,16 +72,6 @@ F3
 
 ""
 F4
-
-###########################
-#  various dmenu scripts  #
-###########################
-
-"python3 ~/productivity/toggl.py"
-alt + s
-
-"python3 ~/productivity/spotlight.py"
-Mod2+Mod4 + space
 
 ###########################
 #      Spotify binds      #
@@ -105,5 +124,33 @@ Mod4+Mod2+Shift + j
 "xdotool type ') '"
 Shift_R + c:0xff80
 
-"sleep 0.1 ; xdotool type \\delta"
+"sleep 0.1 ; xdotool tyoe '‎'"
 Release+alt+Shift + l + d
+
+"sleep 0.1 ; xdotool type 'testeroo'"
+alt+d
+
+###########################
+#      Questionable!      #
+###########################
+
+""
+Shift+9
+
+""
+Shift+0
+
+# MACROS = PAIN
+
+# "xdotool key c"
+# b:8
+
+# "xdotool key v"
+# b:9
+
+# "xdotool key d"
+# b:2
+
+# "xdotool key f"
+# b:3
+

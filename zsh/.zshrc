@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/lib/emsdk/upstream/emscripten:/usr/lib/emsdk/node/12.18.1_64bit/bin:/usr/lib/emsdk:/usr/lib/emscripten/:$HOME/.cargo/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/quantumish/.oh-my-zsh"
@@ -108,11 +109,18 @@ alias ydl="youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s'"
 alias neofetch="neofetch --ascii ~/.config/neofetch/arch.ascii"
 alias gs="git status"
 alias nano=mg
+alias ls=lsd
+alias hexdump=hexyl
+alias cat=bat
+alias rm=rip
+alias gcc="gcc -Wall -Werror -pedantic-errors"
+alias g++="g++ -Wall -Weffc++ -Werror -pedantic-errors"
+
 
 function recompile() {
-    cd $1
+    cd ~/.config/$1
     sudo make clean install &> /dev/null
-    cd ~
+    cd -
 }
 
 function fix_titles() {
@@ -130,7 +138,7 @@ function themeage() {
     python ~/test.py zathurarc
     python ~/test.py colors-vis
     #recompile ~/herbe
-    recompile ~/.config/dmenu
+    recompile dmenu
     #recompile ~/st
 }
 
@@ -146,7 +154,18 @@ function event() {
     notify-send ${EVENTS[RAND_INDEX]} && themeage ~/.config/wallpapers/${WALLPAPERS[RAND_INDEX]}
 }
 
+eval $(thefuck --alias)
+eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source  /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ "$TERM" == "dumb" ]]
+then
+    unsetopt zle
+    unsetopt prompt_cr
+    unsetopt prompt_subst
+    unfunction precmd
+    unfunction preexec
+    PS1='$ '
+fi;

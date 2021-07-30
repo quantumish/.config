@@ -1,18 +1,10 @@
 xmodmap ~/.config/X/.xmodmap &
 xbindkeys &
-sh ~/.config/X/xcape.sh & 
-feh --bg-fill ~/.config/wallpapers/firewatch-galaxy.jpg &
+sh ~/.config/X/xcape.sh &
 xrandr --output DP-5 --rotate left --left-of HDMI-0 &
-slstatus &
+feh --bg-fill ~/.config/wallpapers/firewatch-galaxy.jpg &
 emacs --daemon &
 dunst &
 sh ~/.config/dunst/reload_dunst.sh &
+python ~/.config/xkeymode.py &
 exec dwm
-
-# Uncomment for EXWM
-
-#xhost +SI:localuser:$USER
-#export _JAVA_AWT_WM_NONREPARENTING=1
-#xsetroot -cursor_name left_ptr
-#xset r rate 200 60
-#exec emacs

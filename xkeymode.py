@@ -16,6 +16,9 @@ sock.bind((UDP_IP, UDP_PORT))
 
 mode = "default"
 
+def quickwrite(file):
+
+
 while True:
     data, addr = sock.recvfrom(1024)
     if data == b"normal":
@@ -30,3 +33,4 @@ while True:
             mode = "normal"
     elif data == b"kill":
         exit(1)
+
